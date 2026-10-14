@@ -14,7 +14,7 @@ jobs:
       
       - name: Set up Python
         uses: actions/setup-python@v5
-        
+
         with:
           python-version: "3.12"
 
@@ -25,3 +25,6 @@ jobs:
 
       - name: Check Django configuration
         run: python manage.py check
+
+      - name: Run automated tests
+        run: python manage.py test
